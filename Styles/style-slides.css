@@ -1,0 +1,142 @@
+:root{
+    --white-color: #fff;
+    --primary-color: #204080;
+    --secondary-color: #406080;
+    --third-color: #606080;
+    --gray-color: #E0E0E0;
+}
+
+/*SLIDER*/
+.slider{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.buttons {
+    position: absolute;
+    z-index: 90;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    transition: 0.3s;
+}
+.buttons .button{
+    display: inline-block;
+    height: 1.2rem;
+    width: 1.2rem;
+    margin: 0 0.8rem 0.5rem 0.8rem;
+    color:var(--white-color);
+    cursor: pointer;
+    opacity: 0.3; 
+    transition: 0.4s;
+}
+.slider:hover .buttons{
+    opacity: 1;
+}
+.buttons .btn-active{
+    opacity: 0.8;
+}
+.arrows div{
+    position: absolute;
+    z-index: 90;
+    opacity: 0.5;
+    font-size: 7rem;
+    font-weight: bold;
+    color: var(--white-color);
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.5s;
+}
+.arrows div:hover{
+    opacity: 0.9;
+}
+.arrows .left-arrow{
+    cursor: pointer;
+    left: 2rem;
+}
+.arrows .right-arrow{
+    cursor: pointer;
+    right: 2rem;
+}
+
+/*Slides*/
+.slides{
+    transition: 1s;
+    position: absolute;
+}
+.slide1{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: url(../Images/advent.JPG) no-repeat center/cover;
+}
+.slide1 p, .slide4 p{
+    padding-top: 45vh !important;
+}
+.slide2{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: url(../Images/gastro.jpg) no-repeat center/cover;
+}
+.slide2 h2, .slide2 p{
+    padding-top:33vh !important;
+}
+.slide3{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: url(../Images/klizanje2.jpg) no-repeat center/cover;
+}
+.slide4{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: url(../Images/lunapark.JPG) no-repeat center/cover;
+}
+.slides p, .slides h2{
+    color: var(--white-color);
+    transition: 0.3s;
+}
+.slides h2{
+    padding-top: 25vh;
+    font-size: 2.2rem;
+    text-shadow:
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+      1px 1px 0 #000;
+}
+.slides p{
+    padding-top: 20vh;
+    font-size: 1.4rem;
+    text-shadow:
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+      1px 1px 0 #000;
+}
+.transparent-box{
+    background-image: linear-gradient(-180deg, rgba(255,255,255,0.2),rgba(0,0,0,0.7));
+    height:100%;
+    width:100%;
+}
+.active-slide{
+    margin-left:0;
+    margin-right: 0;
+    z-index: 0;
+}
+.second-slide{
+    transform: translate(100%);
+    z-index: -1;
+}
+.third-slide{
+    transform: translate(200%);
+    z-index: -1;
+}
+.forth-slide{
+    transform: translate(-100%);
+    z-index: -2;
+}

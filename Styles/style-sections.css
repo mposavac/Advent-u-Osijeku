@@ -1,0 +1,157 @@
+:root{
+    --white-color: #fff;
+    --primary-color: #204080;
+    --secondary-color: #406080;
+    --third-color: #606080;
+    --gray-color: #E0E0E0;
+}
+
+/*Location*/
+.location{
+    text-align: center;
+    background: var(--white-color);
+}
+.location div{
+    margin: 1rem auto 1rem auto;
+    border: var(--primary-color) 0.7rem solid;
+    border-radius: 14px;
+}
+.location h2{
+    padding-top:1rem;
+}
+.location p{
+    padding-bottom: 1rem;
+}
+.location p:first-of-type{
+    font-size: 1.5rem;
+}
+
+/*Calendar*/
+.calendar{
+    background: url(../Images/Lokacija.jpg) no-repeat center/cover;
+    background-attachment: fixed; 
+    text-align: center;
+}
+.calendar h2{
+    padding: 1rem;
+    color: var(--white-color);
+}
+.calendar table{
+    padding: 1rem;
+    margin: auto;
+}
+.calendar table thead th{
+    color: var(--white-color);
+    border-radius: 5px;
+    opacity: 0.8;
+}
+.calendar table td{
+    text-align: center;
+    border: 1px black solid;
+    border-radius: 8px;
+    padding: 0.75rem;
+    margin: 0.25rem;
+    background: var(--white-color);
+    cursor: pointer;
+    transition: 0.5s;
+}
+.calendar table tr:first-child td:first-child, 
+.calendar table tr:last-child td:last-child{
+    visibility: hidden;
+}
+.calendar .date-active{
+    background: var(--third-color);
+    color: var(--white-color);
+}
+.events{
+    margin: 2rem auto;
+    text-align: center;
+    height: 11rem;
+    width: 40%;
+    border: var(--primary-color) 2px solid;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.7);
+}
+.events h3{
+    margin: 2rem auto;
+    
+}
+.events h3, p{
+    opacity: 1;
+    transition: 150ms;
+}
+.calendar::after{
+    visibility: hidden;
+    content: "space";
+}
+
+/*Photos*/
+.photos{
+    margin: 1.5rem auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: auto;
+    row-gap: 1rem;
+}
+#Photos h2{
+    text-align: center;
+    color: var(--primary-color);
+    margin-top: 1.5rem;
+}
+#Photos h3:first-of-type{
+    text-align: center;
+    color: var(--primary-color);
+    font-style: italic;
+    margin-top: 0.2rem;
+}
+.photo img{
+    width:100%;
+    max-width: 400px;
+    height: 250px;
+    transition: 0.5s;
+}
+.photo{
+    position: relative;
+    overflow: hidden;
+    margin:auto;
+    border: var(--gray-color) 0.4rem solid;
+    height: 250px;
+}
+.photo h3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: var(--white-color) !important;
+    opacity: 0;
+    text-shadow:
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+      1px 1px 0 #000;
+    transition: 0.5s;
+}
+.photo:hover h3{
+    opacity: 1;
+}
+.photo:hover img{
+    opacity: 0.7;
+    transform: scale(1.25);
+}
+
+/*Contact*/
+.contact{   
+    text-align: center;
+}
+.contact h3{
+    padding-top:0.5rem;
+    color: var(--primary-color);
+}
+.contact a i{
+    margin: 1rem;
+    color: var(--secondary-color);
+    transition: 0.3s;
+}
+.contact a:hover{
+    opacity: 0.5;
+}
